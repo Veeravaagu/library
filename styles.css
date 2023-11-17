@@ -1,0 +1,44 @@
+.bookContainer{
+    background-color: cyan;
+    width: 100vw;
+    height: 10vh;
+    display: grid;
+    grid: 1fr / 40% 20% 10% 10% 1fr;
+    align-items: center;
+}
+
+.titleContainer{
+    grid-area: 1 / 1 / 2 / 2;
+    border: 4px dotted red;
+    justify-self: center;
+}
+
+
+
+.authorContainer{
+    grid-area: 1 / 2 / 2 / 3;
+    border: 4px dashed yellowgreen;
+    justify-self: center;
+}
+
+.pageContainer{
+    grid-area: 1 / 3 / 2 / 4;
+    border: 4px dotted blue;
+    justify-self: center;
+}
+
+.pageContainer>input{
+    width: 40%;
+}
+
+.statusContainer{
+    grid-area: 1 / 4 / 2 / 5;
+    border: 4px dotted black;
+    justify-self: center;
+}
+
+.buttonContainer{
+    grid-area: 1 / 5 / 2 / 6;
+    border: 4px dotted palevioletred;
+    justify-self: center;
+}
