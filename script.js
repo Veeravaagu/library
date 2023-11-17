@@ -19,6 +19,7 @@ function Book(title,author,pages,read) {
 function addBookToLibrary(title,author,pages,read) {
     const newBook = new Book(title,author,pages,read);
     myLibrary.push(newBook)
+    clearDisplay()
     console.log(myLibrary, newBook);
     }
 
@@ -30,12 +31,12 @@ submit.addEventListener('click', function (e){
     const pagesRead = pages.value;
     const readStatus = read.checked;
     addBookToLibrary(bookTitle,authorName,pagesRead,readStatus)
-
-
-
-    // console.log(bookTitle);
-    // console.log(authorName);
-    // console.log(pagesRead);
-    // console.log(readStatus);
 })
+
+function clearDisplay(){
+    title.value = ''
+    author.value = ''
+    pages.value = ''
+    read.checked = ''
+}
 
