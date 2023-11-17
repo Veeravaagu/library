@@ -16,23 +16,26 @@ function Book(title,author,pages,read) {
 
 }
 
-function addBookToLibrary() {
-
-        submit.addEventListener('click', function (e){
-            e.preventDefault();
-            const bookTitle = title.value;
-            const authorName = author.value;
-            const pagesRead = pages.value;
-            const readStatus = read.checked;
-
-            console.log(bookTitle);
-            console.log(authorName);
-            console.log(pagesRead);
-            console.log(readStatus);
-        })
-        title.addEventListener('input', function () {
-            console.log(title.value); // This will log the current value as the user types
-        });
+function addBookToLibrary(title,author,pages,read) {
+    const newBook = new Book(title,author,pages,read);
+    myLibrary.push(newBook)
+    console.log(myLibrary, newBook);
     }
-addBookToLibrary() 
+
+
+submit.addEventListener('click', function (e){
+    e.preventDefault();
+    const bookTitle = title.value;
+    const authorName = author.value;
+    const pagesRead = pages.value;
+    const readStatus = read.checked;
+    addBookToLibrary(bookTitle,authorName,pagesRead,readStatus)
+
+
+
+    // console.log(bookTitle);
+    // console.log(authorName);
+    // console.log(pagesRead);
+    // console.log(readStatus);
+})
 
