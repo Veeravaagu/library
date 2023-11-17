@@ -1,5 +1,6 @@
 // script.js
 
+// DOM elements
 const title = document.querySelector('.title');
 const submit = document.querySelector('#submit');
 const author = document.querySelector('.author');
@@ -7,8 +8,10 @@ const pages = document.querySelector('.pages');
 const read = document.querySelector('.status');
 const libraryContainer = document.querySelector('.library-container');
 
+// Array to store book objects
 const myLibrary = [];
 
+// Book constructor
 function Book(title, author, pages, read) {
   this.title = title;
   this.author = author;
@@ -16,6 +19,7 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
+// Function to add a book to the library
 function addBookToLibrary(title, author, pages, read) {
   const newBook = new Book(title, author, pages, read);
   myLibrary.push(newBook);
@@ -23,6 +27,7 @@ function addBookToLibrary(title, author, pages, read) {
   display();
 }
 
+// Event listener for the submit button
 submit.addEventListener('click', function (e) {
   e.preventDefault();
   if (title.value !== '' && author.value !== '') {
@@ -37,6 +42,7 @@ submit.addEventListener('click', function (e) {
   }
 });
 
+// Function to clear the form input fields
 function clearDisplay() {
   title.value = '';
   author.value = '';
@@ -44,6 +50,7 @@ function clearDisplay() {
   read.checked = '';
 }
 
+// Function to display books in the library
 function display() {
   libraryContainer.innerHTML = '';
 
@@ -51,26 +58,31 @@ function display() {
     const card = document.createElement('div');
     card.classList.add('book-card');
 
+    // Title
     const titleElement = document.createElement('p');
     titleElement.textContent = `Title: ${book.title}`;
     titleElement.classList.add('titleElement');
     card.appendChild(titleElement);
 
+    // Author
     const authorElement = document.createElement('p');
     authorElement.textContent = `Author: ${book.author}`;
     authorElement.classList.add('authorElement');
     card.appendChild(authorElement);
 
+    // Pages
     const pagesElement = document.createElement('p');
     pagesElement.textContent = `Pages: ${book.pages}`;
     pagesElement.classList.add('pagesElement');
     card.appendChild(pagesElement);
 
+    // Read status
     const statusElement = document.createElement('p');
     statusElement.textContent = `Read: ${book.read ? 'Yes' : 'No'}`;
     statusElement.classList.add('statusElement');
     card.appendChild(statusElement);
 
+    // Delete button
     const deleteButtonContainer = document.createElement('div');
     deleteButtonContainer.classList.add('deleteButtonContainer');
 
@@ -88,8 +100,9 @@ function display() {
   }
 }
 
+// Function to delete a book card
 function deleteCard(card) {
   const index = Array.from(libraryContainer.children).indexOf(card);
   myLibrary.splice(index, 1);
-  display(); 
+  display();
 }

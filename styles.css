@@ -2,106 +2,109 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-  }
-  body {
+}
+
+body {
     background: linear-gradient(to right, rgb(238, 238, 238), rgb(57, 62, 70));
-  }
-  form {
+}
+
+form {
     position: sticky;
+    background:linear-gradient(to top ,rgb(57, 62, 70), rgb(238, 238, 238));
     top: 0;
     padding: 1rem;
-    z-index: 1000; 
-  }
-  
-  .bookContainer {
+    z-index: 1000;
+}
+
+.bookContainer {
     width: 100vw;
     height: 10%;
     display: grid;
     grid-template-columns: 40% 20% 10% 10% 1fr;
     align-items: center;
-  }
-  
-  .titleContainer {
+}
+
+.titleContainer {
     grid-area: 1 / 1 / 2 / 3;
-    border: none; 
-    border-radius: 10px; 
+    border: none;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: stretch;
     gap: 1rem;
     margin: 2%;
-  }
+}
 
-  .authorContainer{
+.authorContainer {
     grid-area: 1 / 2 / 2 / 3;
-    border: none; 
-    border-radius: 10px; 
+    border: none;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: stretch;
     gap: 1rem;
-  }
-  
-  .titleContainer label,
-  .authorContainer label,
-  .pageContainer label,
-  .statusContainer label,
-  .buttonContainer button {
+}
+
+.titleContainer label,
+.authorContainer label,
+.pageContainer label,
+.statusContainer label,
+.buttonContainer button {
     margin-bottom: 0.5rem;
     font-weight: bold;
-  }
-  
-  .titleContainer > input,
-  .authorContainer > input,
-  .pageContainer > input {
+}
+
+.titleContainer > input,
+.authorContainer > input,
+.pageContainer > input {
     width: 50%;
     border-radius: 10px;
     border: none;
     padding: 0.5rem;
     margin-bottom: 0.8rem;
-  }
-  
-  .pageContainer {
+}
+
+.pageContainer {
     grid-area: 1 / 3 / 2 / 4;
-    border: none; 
-    border-radius: 10px; 
+    border: none;
+    border-radius: 10px;
     display: flex;
     justify-content: stretch;
     align-items: center;
     gap: 1rem;
-  }
-  
-  .pageContainer > input {
+}
+
+.pageContainer > input {
     width: 30%;
-  }
-  
-  .statusContainer {
+}
+
+.statusContainer {
     grid-area: 1 / 4 / 2 / 5;
-    border: none; 
-    border-radius: 10px; 
+    border: none;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
-  }
-  .statusContainer > input{
+}
+
+.statusContainer > input {
     padding: 0.4rem;
     margin-bottom: 0.8rem;
     border-radius: 10px;
     border: none;
-  }
+}
 
-  .buttonContainer{
+.buttonContainer {
     grid-area: 1 / 5 / 2 / 6;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
-  }
-  
-  .buttonContainer button {
+.buttonContainer button {
     background-color: rgb(0, 173, 181);
-    color: rgb(238, 238, 238)
+    color: rgb(238, 238, 238);
     padding: 1rem;
     width: 30%;
     border: none;
@@ -109,20 +112,19 @@
     cursor: pointer;
 }
 
-.buttonContainer button:hover{
+.buttonContainer button:hover {
     color: rgb(0, 173, 181);
-    background-color:rgb(238, 238, 238);
+    background-color: rgb(238, 238, 238);
 }
-  
 
 .library-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: flex-start; 
-  }
-  
-  .book-card {
+    justify-content: flex-start;
+}
+
+.book-card {
     width: 30%;
     height: 50%;
     background-color: rgb(238, 238, 238);
@@ -133,42 +135,39 @@
     transition: transform 0.2s ease-in-out;
     position: relative;
     background: linear-gradient(to right, rgb(0, 173, 181), rgb(238, 238, 238));
-  }
-  
-  .book-card:hover {
+}
+
+.book-card:hover {
     transform: scale(1.05);
     background: linear-gradient(to right, rgb(0, 173, 181) 50%, rgb(238, 238, 238));
-  }
-  
-  .titleElement,
-  .authorElement,
-  .pagesElement,
-  .statusElement {
+}
+
+.titleElement,
+.authorElement,
+.pagesElement,
+.statusElement {
     font-size: 1.2rem;
     font-weight: 700;
     margin: 1rem;
     padding: 1rem;
-  }
+}
 
-  .deleteButtonContainer {
+.deleteButtonContainer {
     position: absolute;
     top: 0;
     right: 0;
     display: flex;
-  }
-  
-  .deleteButton {
-    background-color: rgb(34, 40, 49); 
-    color: rgb(238, 238, 238); 
+}
+
+.deleteButton {
+    background-color: rgb(34, 40, 49);
+    color: rgb(238, 238, 238);
     border: none;
     border-radius: 5px;
     padding: 0.5rem;
     cursor: pointer;
-  }
-  
-  .deleteButton:hover {
-    background-color: rgb(0, 173, 181); 
-  }
-  
-  
-  
+}
+
+.deleteButton:hover {
+    background-color: rgb(0, 173, 181);
+}
